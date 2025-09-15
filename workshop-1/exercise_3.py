@@ -7,4 +7,4 @@ class MRUA:
         self.acceleration = acceleration
 
     def get_distance(self):
-        return self.initial_velocity * self.time + (1/2 * self.acceleration * np.sqrt(self.time))
+        return self.initial_velocity * self.time + (1/2) * self.acceleration * (self.time ** 2)
