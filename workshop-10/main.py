@@ -60,8 +60,8 @@ def analizar_imagen_termografica(nombre_archivo):
     fig, axs = plt.subplots(1, 2, figsize=(15, 7))
     fig.suptitle(f"Reporte Termográfico: {nombre_archivo}", fontsize=16)
 
-    # Subplot 1: Mapa de Calor
-    im = axs[0].imshow(MatrizCenti, cmap='hot')
+    # Subplot 1: Mapa de Calor (cmap invertido para calor oscuro y frío claro)
+    im = axs[0].imshow(MatrizCenti, cmap='hot_r', origin='upper')
     axs[0].set_title("Mapa de Calor Térmico")
     axs[0].set_xlabel("Coordenada X (píxeles)")
     axs[0].set_ylabel("Coordenada Y (píxeles)")
